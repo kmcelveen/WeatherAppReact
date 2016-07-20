@@ -1,6 +1,6 @@
 {
   "name": "WeatherApp",
-  "version": "1.0.0",
+  "version": "3.8.1",
   "description": "An app to get the weather temps",
   "main": "index.js",
   "scripts": {
