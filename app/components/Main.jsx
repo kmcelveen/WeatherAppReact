@@ -7,17 +7,14 @@ let WeatherForm = require('./WeatherForm');
 let WeatherMessage = require('./WeatherMessage');
 
 
-var Main = React.createClass({
-  render: function (){
+var Main = (props) => {
     return (
       <div>
         <Nav />
         <h2>From Main</h2>
-        {this.props.children}
+        {props.children}
       </div>
-
     );
-  },
-});
+};
 
 module.exports = Main;
