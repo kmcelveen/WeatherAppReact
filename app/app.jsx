@@ -1,12 +1,15 @@
-let React = require('react');
-const ReactDOM = require('react-dom');
-let { Route, Router, IndexRoute, hashHistory } = require('react-router');
-let Main = require('./components/Main');
-let Weather = require('./components/Weather');
-let About = require('./components/About');
-let Example = require('./components/Example');
-let WeatherForm = require('./components/WeatherForm');
-let WeatherMessage = require('./components/WeatherMessage');
+var React = require('react');
+var ReactDOM = require('react-dom');
+var { Route, Router, IndexRoute, hashHistory } = require('react-router');
+var Main = require('./components/Main');
+var Weather = require('./components/Weather');
+var About = require('./components/About');
+var Example = require('./components/Example');
+var WeatherForm = require('./components/WeatherForm');
+var WeatherMessage = require('./components/WeatherMessage');
+
+require('style!css!foundation-sites/dist/foundation.min.css');
+$(document).foundation();
 
 
 ReactDOM.render(
