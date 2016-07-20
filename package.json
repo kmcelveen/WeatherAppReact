@@ -11,10 +11,10 @@
   "license": "MIT",
   "dependencies": {
     "axios": "^0.13.1",
-    "eslint": "^3.0.1",
+    "eslint": "^3.1.1",
     "eslint-config-airbnb": "^9.0.1",
     "eslint-plugin-import": "^1.10.2",
-    "eslint-plugin-jsx-a11y": "^2.0.0",
+    "eslint-plugin-jsx-a11y": "^2.0.1",
     "eslint-plugin-react": "^5.2.2",
     "babel-eslint": "^6.1.2",
     "babel-loader": "^6.2.2",
@@ -26,7 +26,7 @@
     "react-router": "^2.5.2"
   },
   "devDependencies": {
-    "eslint": "^3.0.1",
+    "eslint": "^3.1.1",
     "babel-eslint": "^6.1.2",
     "babel-core": "^6.5.1",
     "babel-loader": "^6.2.2",
