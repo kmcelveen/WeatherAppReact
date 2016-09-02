@@ -2,7 +2,7 @@ let React = require('react');
 
 var Example = (props) => {
     return (
-      <h2>Examples</h2>
+      <h2 className="text-center page-title">Examples</h2>
     );
 };
 

@@ -7,8 +7,8 @@ var About = require('./components/About');
 var Example = require('./components/Example');
 var WeatherForm = require('./components/WeatherForm');
 var WeatherMessage = require('./components/WeatherMessage');
-
 require('style!css!foundation-sites/dist/foundation.min.css');
+require('style!css!sass!applicationStyles');
 $(document).foundation();
 
 
@@ -18,7 +18,7 @@ ReactDOM.render(
       <Route path="about" component={About} />
       <Route path="example" component={Example} />
       <IndexRoute component={Weather} />
-    </ Route>
+    </Route>
   </Router>,
   document.getElementById('app')
 );

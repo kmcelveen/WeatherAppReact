@@ -5,26 +5,32 @@ let { Link, IndexLink } = require('react-router');
 var Nav = React.createClass({
     onSearch: function(e){
         e.preventDefault();
-        alert('this is trash');
+        var location = this.refs.search.value;
+        var encodedLocation = encodeURIComponent(location);
+        if(location.length > 0){
+            this.refs.search.value = '';
+            window.location.hash = "#/?location=" + encodedLocation;
+        }
+        // alert('this is trash');
     },
     render: function(){
         return (
           <div className="top-bar">
             <div className="top-bar-left">
                 <ul className="menu">
-                    <li><IndexLink to="/" activeClassName="active" activeStyle={{fontWeight:'bold'}}>Weather</IndexLink></li>
-                    <li><Link to="/about" activeClassName="active" activeStyle={{fontWeight:'bold'}}>About</Link></li>
-                    <li><Link to="/example" activeClassName="active" activeStyle={{fontWeight: 'bold'}}>Example</Link></li>
+                    <li><IndexLink to="/" activeClassName="active" activeStyle={{textDecoration: 'underline'}}>Weather</IndexLink></li>
+                    <li><Link to="/about" activeClassName="active" activeStyle={{textDecoration: 'underline'}}>About</Link></li>
+                    <li><Link to="/example" activeClassName="active" activeStyle={{textDecoration: 'underline'}}>Example</Link></li>
                 </ul>
             </div>
             <div className="top-bar-right">
-                <form onSubmit={this.onSearch}>
+                <form>
                     <ul className="menu">
                         <li>
-                            <input type="search" placeholder="Search Weather" />
+                            <input type="search" placeholder="Search Weather by city"  ref="search"/>
                         </li>
                         <li>
-                            <button type="button" className="button" value="Get Weather">Get Weather</button>
+                            <button type="button" className="button" value="Get Weather" onClick={this.onSearch}>Get Weather</button>
                         </li>
                     </ul>
                 </form>
